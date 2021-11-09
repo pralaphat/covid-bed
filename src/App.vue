@@ -1,11 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <section class="hero is-fullwidth">
+      <div class="hero-head">
+        <Nav />
+      </div>
+      <router-view/> 
+    </section>
   </div>
-  <router-view/>
 </template>
-
+<script>
+import Nav from './components/partials/Nav.vue';
+export default {
+  name: 'app',
+  components: {
+    Nav
+  }  
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -26,5 +37,8 @@
       color: #42b983;
     }
   }
+}
+.hero {
+    background-image: linear-gradient(#89A1EF, #FFF);
 }
 </style>
