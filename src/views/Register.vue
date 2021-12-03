@@ -1,6 +1,6 @@
 <template>
   <div id="regis">
-      <div class="hero-body m-6">
+      <div class="hero-body">
         <Regis />
       </div>
   </div>
@@ -13,5 +13,12 @@ export default {
     Regis
   }  
 }
-
 </script>
+<style lang="scss" scoped>
+  .hero-body {
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: #fff;
+    border-radius: 30px;
+  }
+</style>

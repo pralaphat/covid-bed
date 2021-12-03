@@ -29,7 +29,7 @@
             <strong>Log in</strong>
           </a>
           <a class="button is-success">
-            <strong>Register</strong>
+            <router-link to="/register-user" class="navbar-item has-text-white">Register</router-link>
           </a>
         </div>
       </div>
