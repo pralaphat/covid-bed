@@ -16,9 +16,9 @@ export default {
 </script>
 <style lang="scss" scoped>
   .hero-body {
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 450px;
+    margin-right: 450px;
     background-color: #fff;
-    border-radius: 30px;
+    border-radius: 10px;
   }
 </style>
