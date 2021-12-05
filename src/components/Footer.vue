@@ -31,7 +31,9 @@
         </div>
       </div>
       <div class="right">
-        <p>This website is a part of CPE327</p>
+        <p>This website is a part of CPE327 course
+          <br>:Software Engineering, Semester 1/2021, KMUTT
+        </p>
       </div>
     </div>
   </footer>

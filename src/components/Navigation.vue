@@ -18,7 +18,7 @@
             <div class="info">
               <p class="initials">{{ this.$store.state.profileInitials }}</p>
               <div class="right">
-                <p>{{ this.$store.state.profileFirstName }} {{ this.$store.state.profileLastName }}</p>
+                <p>Khun, {{ this.$store.state.profileFirstName }}</p>
                 <p>{{ this.$store.state.profileHospital }}</p>
                 <p>{{ this.$store.state.profileEmail }}</p>
               </div>
