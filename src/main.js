@@ -4,8 +4,11 @@ import router from "./router";
 import store from "./store";
 import Vue2Editor from "vue2-editor";
 import { Plugin } from "vue-fragment"; 
+import { firestorePlugin } from "vuefire";
 import firebase from "firebase/app";
 import "firebase/auth";
+
+Vue.use(firestorePlugin);
 
 Vue.use(Plugin);
 
