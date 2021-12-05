@@ -1,4 +1,4 @@
-# covidbed
+# bedme
 
 ## Project setup
 ```
