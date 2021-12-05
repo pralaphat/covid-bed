@@ -1,7 +1,7 @@
 <template>
   <div class="card-group">
     <div v-for="item in requests" :key="item.id" class = "card">
-      {{ "Name: " + item.firstName + " " + "Phone Number: " + item.phoneNumber }}
+      {{ "Name: " + item.firstName + " | " + "Phone Number: " + item.phoneNumber }}
     </div>
   </div>
 </template>
@@ -16,8 +16,9 @@ export default {
     };
   },
   firestore() {
+    const hospital = this.$store.state.profileHospital
     return {
-      requests: db.collection("requests").where('hospital' , "==", "Test Hospital" )
+      requests: db.collection("requests").where('hospital' , "==", hospital )
     };
   },
   computed: {
