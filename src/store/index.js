@@ -60,7 +60,7 @@ export default new Vuex.Store({
       await dataBase.update({
         firstName: state.profileFirstName,
         lastName: state.profileLastName,
-        Hospital: state.profileHospital,
+        hospital: state.profileHospital,
         bedCap: Number(state.profileBedCap),
       });
       commit("setProfileInitials");

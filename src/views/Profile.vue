@@ -75,7 +75,7 @@ export default {
         return this.$store.state.profileHospital;
       },
       set(payload) {
-        this.$store.commit("changeUsername", payload);
+        this.$store.commit("changeHospital", payload);
       },
     },
     bedCap: {
