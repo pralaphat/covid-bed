@@ -13,7 +13,7 @@
         </div>
         <div class="input">
           <input type="text" placeholder="Phone Number" v-model="phoneNumber" />
-          <email class="icon" />
+          <phone class="icon" />
         </div>
         <div class="input">
           <input type="text" placeholder="Hospital" v-model="hospital" />
@@ -32,16 +32,16 @@
 </template>
 
 <script>
-import email from "../assets/Icons/envelope-regular.svg";
 import user from "../assets/Icons/user-alt-light.svg";
 import hospital from "../assets/Icons/hospital.svg";
+import phone from "../assets/Icons/phone.svg"
 import db from "../firebase/firebaseInit";
 export default {
   name: "Request",
   components: {
-    email,
     user,
     hospital,
+    phone
   },
   data() {
     return {
@@ -92,7 +92,7 @@ export default {
   display: none;
   flex: 2;
   background-size: cover;
-  background-image: linear-gradient(to left, #00acb1, #caf0c1);
+  background-image: linear-gradient(to left, #3f2b96, #a8c0ff);
   width: 100%;
   height: 100%;
   @media (min-width: 900px) {

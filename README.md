@@ -1,4 +1,4 @@
-# fireblogs
+# bedme
 
 ## Project setup
 ```
