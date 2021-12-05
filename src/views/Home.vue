@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BlogPost :post="welcomeScreen" />
+    <BlogPost v-if="!user" :post="welcomeScreen" />
     <BlogPost :post="post" v-for="(post, index) in blogPostsFeed" :key="index" />
   </div>
 </template>
@@ -22,12 +22,6 @@ export default {
     };
   },
   computed: {
-    blogPostsFeed() {
-      return this.$store.getters.blogPostsFeed;
-    },
-    blogPostsCards() {
-      return this.$store.getters.blogPostsCards;
-    },
     user() {
       return this.$store.state.user;
     },

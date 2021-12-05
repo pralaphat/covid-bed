@@ -21,10 +21,10 @@
         <div class="col-2">
           <ul>
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-            <router-link class="link" :to="{ name: 'Request' }"
+            <router-link v-if="!user" class="link" :to="{ name: 'Request' }"
               >For patient</router-link
             >
-            <router-link class="link" :to="{ name: 'Login' }"
+            <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
               >For Hospital</router-link
             >
           </ul>
@@ -51,9 +51,6 @@ export default {
   computed: {
     user() {
       return this.$store.state.user;
-    },
-    admin() {
-      return this.$store.state.profileAdmin;
     },
   },
 };
