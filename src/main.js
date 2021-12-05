@@ -1,21 +1,25 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import 'bulma/css/bulma.css';
-//import { initializeApp } from 'firebase/app';
-//import { getAnalytics } from "firebase/analytics";
-//import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-firestore-lite.js';
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import Vue2Editor from "vue2-editor";
+import { Plugin } from "vue-fragment"; 
+import firebase from "firebase/app";
+import "firebase/auth";
 
-/*const firebaseConfig = {
-  apiKey: "AIzaSyB4_b4BzASNqFpdF6HYsPHiwXq6AMHkZLk",
-  authDomain: "covidbed-4e0ac.firebaseapp.com",
-  projectId: "covidbed-4e0ac",
-  storageBucket: "covidbed-4e0ac.appspot.com",
-  messagingSenderId: "1077987210502",
-  appId: "1:1077987210502:web:f3fbf3cd0d87b3cc579a87",
-  measurementId: "G-9MEGEKLHS6"
-};
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);*/
+Vue.use(Plugin);
 
-createApp(App).use(router).mount('#app')
+Vue.use(Vue2Editor);
+
+Vue.config.productionTip = false;
+
+let app;
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    new Vue({
+      router,
+      store,
+      render: (h) => h(App),
+    }).$mount("#app");
+  }
+});
