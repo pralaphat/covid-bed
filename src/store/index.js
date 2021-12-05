@@ -61,7 +61,7 @@ export default new Vuex.Store({
         firstName: state.profileFirstName,
         lastName: state.profileLastName,
         Hospital: state.profileHospital,
-        bedCap: state.profileBedCap,
+        bedCap: Number(state.profileBedCap),
       });
       commit("setProfileInitials");
     },
