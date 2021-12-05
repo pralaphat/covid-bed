@@ -22,6 +22,10 @@
           <hospital class="icon" />
         </div>
         <div class="input">
+          <input type="number" placeholder="Bed capacity" v-model="bedCap" />
+          <bed class="icon" />
+        </div>
+        <div class="input">
           <input type="text" placeholder="Email" v-model="email" />
           <email class="icon" />
         </div>
@@ -43,6 +47,7 @@ import email from "../assets/Icons/envelope-regular.svg";
 import password from "../assets/Icons/lock-alt-solid.svg";
 import user from "../assets/Icons/user-alt-light.svg";
 import hospital from "../assets/Icons/hospital.svg";
+import bed from "../assets/Icons/bed.svg";
 
 import firebase from "firebase/app";
 import "firebase/auth";
@@ -54,6 +59,7 @@ export default {
     password,
     user,
     hospital,
+    bed,
   },
   data() {
     return {
@@ -62,6 +68,7 @@ export default {
       hospital: "",
       email: "",
       password: "",
+      bedCap: "",
       error: null,
       errorMsg: "",
     };
@@ -73,7 +80,8 @@ export default {
         this.password !== "" &&
         this.firstName !== "" &&
         this.lastName !== "" &&
-        this.hospital !== ""
+        this.hospital !== "" &&
+        this.bedCap !== ""
       ) {
         this.error = false;
         this.errorMsg = "";
@@ -89,6 +97,7 @@ export default {
           lastName: this.lastName,
           hospital: this.hospital,
           email: this.email,
+          bedCap: this.bedCap,
         });
         this.$router.push({ name: "Home" });
         return;
