@@ -25,7 +25,7 @@
             </div>
             <div class="options">
               <div class="option">
-                <router-link class="option" to="#">
+                <router-link class="option" :to="{ name: 'Profile'}">
                   <userIcon class="icon" />
                   <p>Profile</p>
                 </router-link>

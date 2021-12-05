@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import Request from "../views/Request.vue"
+import Profile from "../views/Profile.vue"
 
 Vue.use(VueRouter);
 
@@ -38,6 +39,14 @@ const routes = [
     component: Request,
     meta: {
       title: "Request"
+    }
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile,
+    meta: {
+      title: "Profile"
     }
   },
 ];
