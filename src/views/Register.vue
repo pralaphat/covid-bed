@@ -97,7 +97,7 @@ export default {
           lastName: this.lastName,
           hospital: this.hospital,
           email: this.email,
-          bedCap: this.bedCap,
+          bedCap: Number(this.bedCap),
         });
         this.$router.push({ name: "Home" });
         return;

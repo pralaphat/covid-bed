@@ -5,6 +5,8 @@ import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import Request from "../views/Request.vue"
 import Profile from "../views/Profile.vue"
+import Dashboard from "../views/Dashboard.vue"
+import Manage from "../views/Manage.vue"
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -49,6 +51,24 @@ const routes = [
     component: Profile,
     meta: {
       title: "Profile",
+      requiresAuth: true,
+    },
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    component: Dashboard,
+    meta: {
+      title: "Dashboard",
+      requiresAuth: true,
+    },
+  },
+  {
+    path: "/manage",
+    name: "Manage",
+    component: Manage,
+    meta: {
+      title: "Manage",
       requiresAuth: true,
     },
   },

@@ -8,9 +8,11 @@
       </div>
       <div class="nav-links">
         <ul v-show="!mobile">
-          <router-link class="link" :to="{ name: 'Home'}">Home</router-link>
+          <router-link v-if="!user" class="link" :to="{ name: 'Home'}">Home</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Request'}">For Patient</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Login'}">For Hospital</router-link>
+          <router-link v-if="user" class="link" :to="{ name: 'Dashboard'}">Dashboard</router-link>
+          <router-link v-if="user" class="link" :to="{ name: 'Manage'}">Manage request</router-link>
         </ul>
         <div v-if="user" :class="{ 'mobile-user-menu': mobile }" @click="toggleProfileMenu" class="profile" ref="profile">
           <span>{{ this.$store.state.profileInitials }}</span>
@@ -42,9 +44,11 @@
     <navIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile" />
     <transition name="mobile-nav">
       <ul class="mobile-nav" v-show="mobileNav">
-        <router-link class="link" :to="{ name: 'Home'}">Home</router-link>
+        <router-link v-if="!user" class="link" :to="{ name: 'Home'}">Home</router-link>
         <router-link v-if="!user" class="link" :to="{ name: 'Request'}">For Patient</router-link>
         <router-link v-if="!user" class="link" :to="{ name: 'Login'}">For Hospital</router-link>
+        <router-link v-if="user" class="link" :to="{ name: 'Dashboard'}">Dashboard</router-link>
+        <router-link v-if="user" class="link" :to="{ name: 'Manage'}">Manage request</router-link>
       </ul>
     </transition>
   </header>

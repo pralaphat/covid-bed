@@ -3,9 +3,7 @@
     <div class="container">
       <div class="left">
         <div class="col-1">
-          <router-link class="header" :to="{ name: 'Home' }"
-            >BedMe</router-link
-          >
+          <router-link class="header" :to="{ name: 'Home' }">BedMe</router-link>
           <ul>
             <li>
               <a href="#"><youTube class="svg-icon"/></a>
@@ -20,19 +18,28 @@
         </div>
         <div class="col-2">
           <ul>
-            <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
+            <router-link v-if="!user" class="link" :to="{ name: 'Home' }"
+              >Home</router-link
+            >
             <router-link v-if="!user" class="link" :to="{ name: 'Request' }"
               >For patient</router-link
             >
             <router-link v-if="!user" class="link" :to="{ name: 'Login' }"
               >For Hospital</router-link
             >
+            <router-link v-if="user" class="link" :to="{ name: 'Dashboard' }"
+              >Dashboard</router-link
+            >
+            <router-link v-if="user" class="link" :to="{ name: 'Manage' }"
+              >Manage request</router-link
+            >
           </ul>
         </div>
       </div>
       <div class="right">
-        <p>This website is a part of CPE327 course
-          <br>:Software Engineering, Semester 1/2021, KMUTT
+        <p>
+          This website is a part of CPE327 course <br />:Software Engineering,
+          Semester 1/2021, KMUTT
         </p>
       </div>
     </div>
