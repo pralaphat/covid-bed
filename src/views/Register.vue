@@ -7,7 +7,7 @@
           >Login</router-link
         >
       </p>
-      <h2>Create BedMe Account</h2>
+      <h2>Create an account</h2>
       <div class="inputs">
         <div class="input">
           <input type="text" placeholder="First Name" v-model="firstName" />
@@ -35,7 +35,7 @@
         </div>
         <div v-show="error" class="error">{{ this.errorMsg }}</div>
       </div>
-      <button @click.prevent="register" >Sign Up</button>
+      <button @click.prevent="register" >Join now</button>
       <div class="angle"></div>
     </form>
     <div class="background"></div>

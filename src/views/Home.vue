@@ -15,7 +15,7 @@ export default {
       welcomeScreen: {
         title: "BEDME: COVID-19 resources management",
         blogPost:
-          "✅ For hospital to manage resources system  ✅ For patient to request COVID-19 bed",
+          "✅ For hospital to manage resource system.  ✅ For patient to request COVID-19 bed.",
         welcomeScreen: true,
         photo: "doctor",
       },
