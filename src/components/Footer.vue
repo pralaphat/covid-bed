@@ -1,3 +1,6 @@
+<!-- Footer.vue
+      this code is footer components including home button, for patient button, 
+      and for hospital button that used for hompage -->
 <template>
   <footer>
     <div class="container">
