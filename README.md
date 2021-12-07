@@ -1,5 +1,8 @@
 # bedme
 
+## Project site
+https://bedme.netlify.app/
+
 ## Project setup
 ```
 npm install
